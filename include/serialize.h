@@ -26,7 +26,7 @@ int tet_serialize_event(char *buffer, int offset, tet_event_t *event)
 
 void tet_serialize_event_list(tet_event_list_t *list)
 {
-    char *buffer = malloc(sizeof(char) * SERIALIZE_EVENT_LIST_BUFFER);
+    char *buffer = (char*)malloc(sizeof(char) * SERIALIZE_EVENT_LIST_BUFFER);
     if (buffer == NULL)
     {
         fprintf(

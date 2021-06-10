@@ -2,11 +2,12 @@
 #define _TINY_EVENT_TRACE_TRACE_H_
 
 #define _GNU_SOURCE
+#include <sys/types.h>
+#include <unistd.h>
+
 #include <string.h>
 #include <sys/time.h>
-#include <sys/types.h>
 #include <time.h>
-#include <unistd.h>
 
 #include "event.h"
 #include "event_list.h"
