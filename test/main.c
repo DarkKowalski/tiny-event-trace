@@ -1,5 +1,9 @@
 #include "../include/tiny_event_trace.h"
 
+#include "another.h"
+
+#include "../include/global_event_list.h"
+
 void function0(void)
 {
     tet_trace_begin_default();
@@ -29,6 +33,7 @@ int main(void)
     function0();
     function1();
     function2();
+    function3();
     tet_trace_end_default();
 
     tet_serialize_event_list(tet_global_event_list);

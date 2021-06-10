@@ -3,16 +3,9 @@
 
 #include <stdint.h>
 
-#define MAX_EVENT_FILE_NAME     (64)
-#define MAX_EVENT_FUNCTION_NAME (64)
-
 #define MAX_EVENT (8192)
 
 #define SERIALIZE_EVENT_BUFFER      (256)
 #define SERIALIZE_EVENT_LIST_BUFFER (SERIALIZE_EVENT_BUFFER * MAX_EVENT + 64)
-
-#ifndef _POSIX_C_SOURCE
-#define _POSIX_C_SOURCE >= 199309L
-#endif
 
 #endif

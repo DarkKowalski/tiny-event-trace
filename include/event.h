@@ -22,23 +22,17 @@ typedef enum tet_event_phase
 
 typedef struct tet_event
 {
-    char              file[MAX_EVENT_FILE_NAME];
-    char              function[MAX_EVENT_FUNCTION_NAME];
+    char              *file;
+    char              *function;
     pid_t             pid;
     pid_t             tid;
     tet_event_phase_t phase;
-    long            timestamp;
+    long              timestamp;
 } tet_event_t;
 
 #define TET_DEFAULT_FILE_NAME     __FILE__
 #define TET_DEFAULT_FUNCTION_NAME __func__
 
-void tet_print_event(tet_event_t *event)
-{
-    printf(
-        "file: %s\nfunction: %s\npid: %d\ntid: %d\nphase: %d\ntimestamp: %ld\n",
-        event->file, event->function, event->pid, event->tid, event->phase,
-        event->timestamp);
-}
+void tet_print_event(tet_event_t *event);
 
 #endif
