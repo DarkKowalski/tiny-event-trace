@@ -1,8 +1,15 @@
 #ifndef _TINY_EVENT_TRACE_EVENT_H_
 #define _TINY_EVENT_TRACE_EVENT_H_
 
+#ifndef _GNU_SOURCE
+#define _GNU_SOURCE
+#endif
+#include <unistd.h>
+#include <sys/types.h>
+
 #include <stdio.h>
 #include <time.h>
+#include <stdio.h>
 
 #include "limit.h"
 

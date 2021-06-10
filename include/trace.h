@@ -1,7 +1,11 @@
 #ifndef _TINY_EVENT_TRACE_TRACE_H_
 #define _TINY_EVENT_TRACE_TRACE_H_
 
+#include "limit.h"
+
+#ifndef _GNU_SOURCE
 #define _GNU_SOURCE
+#endif
 #include <sys/types.h>
 #include <unistd.h>
 
