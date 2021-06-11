@@ -12,6 +12,7 @@ tet_event_list_t *tet_init_event_list(void)
     }
 
     list->slot = slot;
+    list->pointer = 0;
     return list;
 }
 
