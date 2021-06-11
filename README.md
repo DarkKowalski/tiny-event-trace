@@ -25,4 +25,8 @@ $ cat install_manifest.txt | xargs rm
 
 ### Trace event
 
-Like `test/main.c`
+Have a look at `test/main.c`
+
+```bash
+$ gcc -L/usr/local/lib/tiny_event_trace -ltiny_event_trace test/another.c test/main.c -o test.out
+```

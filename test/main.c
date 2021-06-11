@@ -1,8 +1,7 @@
-#include "../include/tiny_event_trace.h"
+#include <tiny_event_trace/tiny_event_trace.h>
+#include <tiny_event_trace/global_event_list.h>
 
 #include "another.h"
-
-#include "../include/global_event_list.h"
 
 void function0(void)
 {

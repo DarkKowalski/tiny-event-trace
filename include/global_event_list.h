@@ -5,6 +5,6 @@
 
 /* Notice: once include once */
 
-tet_event_list_t *tet_global_event_list;
+__attribute__ ((visibility("default"))) tet_event_list_t *tet_global_event_list;
 
 #endif

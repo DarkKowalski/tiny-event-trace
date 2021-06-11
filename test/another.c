@@ -1,4 +1,5 @@
 #include "another.h"
+#include <unistd.h>
 
 void function3(void)
 {
@@ -6,4 +7,3 @@ void function3(void)
 	sleep(1);
 	tet_trace_end_default();
 }
-
