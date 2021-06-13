@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-#define MAX_EVENT (8192)
+#define MAX_EVENT (64 * 1024)
 
 #define SERIALIZE_EVENT_BUFFER      (256)
 #define SERIALIZE_EVENT_LIST_BUFFER (SERIALIZE_EVENT_BUFFER * MAX_EVENT + 64)

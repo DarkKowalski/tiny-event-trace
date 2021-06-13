@@ -1,10 +1,21 @@
 #include "../include/event_list.h"
 
-tet_event_list_t *tet_init_event_list(void)
+tet_event_list_t *tet_init_event_list(int size)
 {
+    if (size > MAX_EVENT)
+    {
+        fprintf(stderr,
+                "Failed to initialize Event List. Given size: %d Max size: "
+                "%d. Abort!\n",
+                size, MAX_EVENT);
+        exit(1);
+    }
+
+    int events = size <= 0 ? MAX_EVENT : size;
+
     tet_event_list_t *list =
         (tet_event_list_t *)malloc(sizeof(tet_event_list_t));
-    tet_event_t *slot = (tet_event_t *)malloc(sizeof(tet_event_t) * MAX_EVENT);
+    tet_event_t *slot = (tet_event_t *)malloc(sizeof(tet_event_t) * events);
     if (list == NULL || slot == NULL)
     {
         fprintf(stderr, "Failed to initialize Event List. Abort!\n");
@@ -28,7 +39,7 @@ void tet_destory_event_list(tet_event_list_t *list)
     free(list);
 }
 
-tet_event_t* tet_get_a_slot_from_event_list(tet_event_list_t *list)
+tet_event_t *tet_get_a_slot_from_event_list(tet_event_list_t *list)
 {
 
     if (list->pointer > MAX_EVENT - 1 || list->pointer < 0)

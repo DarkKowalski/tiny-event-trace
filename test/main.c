@@ -26,7 +26,7 @@ void function2(void)
 
 int main(void)
 {
-    tet_global_event_list = tet_init_event_list();
+    tet_global_event_list = tet_init_event_list(0);
 
     tet_trace_begin_default();
     function0();
