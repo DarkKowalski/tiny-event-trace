@@ -11,10 +11,11 @@ int tet_serialize_event(char *buffer, int offset, tet_event_t *event)
                    "\"ph\":\"%c\",\n"
                    "\"pid\":\"%i\",\n"
                    "\"tid\":\"%i\",\n"
-                   "\"ts\":\"%ld\"},\n",
+                   "\"ts\":\"%ld\",\n"
+                   "\"args\": {\"line\": \"%d\"}},\n",
                    event->file, event->function,
                    tet_event_phase_str[event->phase], event->pid, event->tid,
-                   event->timestamp);
+                   event->timestamp, event->line);
 }
 
 void tet_serialize_event_list(tet_event_list_t *list)

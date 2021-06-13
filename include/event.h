@@ -28,10 +28,12 @@ typedef struct tet_event
     pid_t             tid;
     tet_event_phase_t phase;
     long              timestamp;
+    int               line;
 } tet_event_t;
 
 #define TET_DEFAULT_FILE_NAME     __FILE__
 #define TET_DEFAULT_FUNCTION_NAME __func__
+#define TET_DEFAULT_LINE_NUMBER   __LINE__
 
 void tet_print_event(tet_event_t *event);
 

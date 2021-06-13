@@ -1,13 +1,14 @@
 #include "../include/trace.h"
 
-void tet_trace(char *file, const char *func,
+void tet_trace(char *file, const char *func, int line,
                const tet_event_phase_t phase)
 {
     tet_event_list_t *list = tet_global_event_list;
     tet_event_t *     event = tet_get_a_slot_from_event_list(list);
 
-    event->file = (char*)file;
-    event->function = (char*)func;
+    event->file = (char *)file;
+    event->function = (char *)func;
+    event->line = line;
 
     event->phase = phase;
 
