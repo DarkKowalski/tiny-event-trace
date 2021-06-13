@@ -18,6 +18,6 @@ void tet_trace(char *file, const char *func, int line, tet_event_id_t id,
 
     struct timespec t;
     clock_gettime(CLOCK_MONOTONIC, &t);
-    time_t ms = t.tv_sec * 1000 + t.tv_nsec / 1E6;
-    event->timestamp = ms;
+    time_t us = t.tv_sec * 1E6 + t.tv_nsec / 1E3;
+    event->timestamp = us;
 }
