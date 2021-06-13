@@ -1,6 +1,6 @@
 #include "../include/trace.h"
 
-void tet_trace(char *file, const char *func, int line,
+void tet_trace(char *file, const char *func, int line, tet_event_id_t id,
                const tet_event_phase_t phase)
 {
     tet_event_list_t *list = tet_global_event_list;
@@ -9,6 +9,7 @@ void tet_trace(char *file, const char *func, int line,
     event->file = (char *)file;
     event->function = (char *)func;
     event->line = line;
+    event->id = id;
 
     event->phase = phase;
 

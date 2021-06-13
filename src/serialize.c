@@ -7,13 +7,13 @@ int tet_serialize_event(char *buffer, int offset, tet_event_t *event)
     char *buf = buffer + offset;
 
     return sprintf(buf,
-                   "{\"name\": \"%s:%s\",\n"
+                   "{\"name\": \"%s:%s(%d)\",\n"
                    "\"ph\":\"%c\",\n"
                    "\"pid\":\"%i\",\n"
                    "\"tid\":\"%i\",\n"
                    "\"ts\":\"%ld\",\n"
                    "\"args\": {\"line\": \"%d\"}},\n",
-                   event->file, event->function,
+                   event->file, event->function, event->id,
                    tet_event_phase_str[event->phase], event->pid, event->tid,
                    event->timestamp, event->line);
 }

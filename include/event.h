@@ -4,12 +4,11 @@
 #ifndef _GNU_SOURCE
 #define _GNU_SOURCE
 #endif
-#include <unistd.h>
 #include <sys/types.h>
+#include <unistd.h>
 
 #include <stdio.h>
 #include <time.h>
-#include <stdio.h>
 
 #include "limit.h"
 
@@ -20,15 +19,18 @@ typedef enum tet_event_phase
     // NOTICE: We only support begin and end phase for now
 } tet_event_phase_t;
 
+typedef int tet_event_id_t;
+
 typedef struct tet_event
 {
-    char              *file;
-    char              *function;
+    char *            file;
+    char *            function;
     pid_t             pid;
     pid_t             tid;
     tet_event_phase_t phase;
     long              timestamp;
     int               line;
+    tet_event_id_t    id;
 } tet_event_t;
 
 #define TET_DEFAULT_FILE_NAME     __FILE__

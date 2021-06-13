@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 project(tiny_event_trace VERSION 0.0.1 DESCRIPTION "Profile your C program with chrome://tracting")
 
 set(CMAKE_C_STANDARD 99)
-set(CMAKE_C_FLAGS "-Wall")
+set(CMAKE_C_FLAGS "-Wall -O3 -fno-fast-math -ggdb3")
 
 set(PUBLIC_INCLUDE_DIRECTORIES include/)
 file(GLOB_RECURSE RELEASE_PUBLIC_HEADERS "include/*.h")
