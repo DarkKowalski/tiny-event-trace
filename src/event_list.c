@@ -27,11 +27,11 @@ tet_event_list_t *tet_init_event_list(int size)
     return list;
 }
 
-void tet_destory_event_list(tet_event_list_t *list)
+void tet_destroy_event_list(tet_event_list_t *list)
 {
     if (list == NULL || list->slot == NULL)
     {
-        fprintf(stderr, "Failed to destory Event List. Abort!\n");
+        fprintf(stderr, "Failed to destroy Event List. Abort!\n");
         exit(1);
     }
 
