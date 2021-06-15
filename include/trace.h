@@ -17,7 +17,7 @@
 
 extern tet_event_list_t *tet_global_event_list;
 
-void tet_trace(char *file, const char *func,
+void tet_trace(const char *file, const char *func,
                int line, tet_event_id_t id, const tet_event_phase_t phase);
 
 #define tet_trace_begin(file, func, line, id) tet_trace(file, func, line, id, PHASE_BEGIN)
