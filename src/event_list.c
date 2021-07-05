@@ -53,6 +53,9 @@ tet_event_t *tet_get_a_slot_from_event_list(tet_event_list_t *list)
     int          pointer = list->pointer++;
     tet_event_t *slot = &(list->slot[pointer]);
 
+    slot->file = NULL;
+    slot->function = NULL;
+
     return slot;
 }
 

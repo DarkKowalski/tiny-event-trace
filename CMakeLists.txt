@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 project(tiny_event_trace VERSION 0.0.1 DESCRIPTION "Profile your C program with chrome://tracting")
+set(PROJECT_BINARY_DIR ./build)
 
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_FLAGS "-Wall -O3 -fno-fast-math -ggdb3")
@@ -21,3 +22,7 @@ INSTALL(TARGETS ${PROJECT_NAME}
         LIBRARY DESTINATION lib/${PROJECT_NAME}
         PUBLIC_HEADER DESTINATION include/${PROJECT_NAME}
 )
+
+add_subdirectory(test)
+enable_testing()
+add_test(test_simple ./test/test_simple.out)

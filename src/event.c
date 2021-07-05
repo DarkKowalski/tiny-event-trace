@@ -2,8 +2,14 @@
 
 void tet_print_event(tet_event_t *event)
 {
-    printf(
-        "file: %s\nfunction: %s\npid: %d\ntid: %d\nphase: %d\ntimestamp: %ld\n",
-        event->file, event->function, event->pid, event->tid, event->phase,
-        event->timestamp);
+    printf("id: %d\n"
+           "file: %s\n"
+           "line: %d\n"
+           "function: %s\n"
+           "pid: %d\n"
+           "tid: %d\n"
+           "phase: %d\n"
+           "timestamp: %ld\n",
+           event->id, event->file, event->line, event->function, event->pid,
+           event->tid, event->phase, event->timestamp);
 }

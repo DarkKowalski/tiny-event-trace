@@ -3,7 +3,7 @@
 
 #include "event_list.h"
 
-/* Notice: once include once */
+/* Notice: Include once */
 
 __attribute__((visibility("default"))) tet_event_list_t *tet_global_event_list;
 __attribute__((visibility("default"))) tet_event_id_t    tet_global_event_id;

@@ -13,6 +13,12 @@ $ cmake ..
 $ make
 ```
 
+### Test
+
+```bash
+$ make test
+```
+
 ### Install
 
 ```bash
@@ -34,7 +40,7 @@ $ gcc -L/usr/local/lib/tiny_event_trace -ltiny_event_trace test/another.c test/m
 $ ./test.out
 ```
 
-Open [chrome://tracing](chrome://tracing) and upload the JSON file.
+Open [chrome://tracing](chrome://tracing) and load the JSON file `tiny_event_trace.json`.
 
 Another example:
 
